@@ -37,8 +37,6 @@ def load_from_cache() -> Dict:
             }
     return None
 
-
-
 # Configuración de la página
 st.set_page_config(
     page_title="CONSENSUS",
@@ -53,10 +51,21 @@ Esta aplicación analiza las posiciones principales de los mejores fondos de inv
 las acciones en las que más invierten.            
 """)
 
+# Call to Action simplificado
+st.markdown("""
+<div style='padding: 15px; margin: 15px 0; text-align: center;'>
+    <h2 style='color: #1f77b4; margin-bottom: 15px;'>📩 ACTUALIZACIÓN SEMANAL</h2>
+    <a href='[TU_LINK_DE_SUBSTACK]' target='_blank'>
+        <div style='background-color: #1f77b4; color: white; padding: 10px 20px; border-radius: 5px; display: inline-block; font-weight: bold;'>
+            SUSCRÍBETE
+        </div>
+    </a>
+</div>
+""", unsafe_allow_html=True)
+
 # Valores fijos (eliminamos el sidebar)
 MIN_APPEARANCES = 6
 SIMILARITY_THRESHOLD = 85
-
 
 # Check cache
 cache = load_from_cache()
@@ -65,8 +74,6 @@ if cache and not cache['is_expired']:
 
 # Function to display data
 def display_data(df: pd.DataFrame, timestamp: str = None):
-    # if timestamp:
-    #     st.info(f"Mostrando datos en caché cargados el {timestamp}.")
     # Modificar el layout para dar más espacio a la visualización
     col1, col2 = st.columns([1, 2])  # Proporción 1:2 para las columnas
 
@@ -140,12 +147,8 @@ def display_data(df: pd.DataFrame, timestamp: str = None):
         key=f"download_data_button_{timestamp}"  # Use a dynamic key based on timestamp
     )
 
-
-
-
-
 # If not loading new data, check if cached data is available and display
-if  cache:
+if cache:
     df_stocks = cache['data']
     display_data(df_stocks, cache['timestamp'])
 
@@ -177,5 +180,4 @@ Esta aplicación es solo para fines informativos y educativos. No constituye ase
 
 ### 🔄 Versión
 - v1.0.0 (Noviembre 2024)
-            
 """)
