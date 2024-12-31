@@ -53,9 +53,9 @@ las acciones en las que más invierten.
 
 # Call to Action simplificado
 st.markdown("""
-<div style='padding: 15px; margin: 15px 0; text-align: center;'>
+<div style='padding: 15px; margin: 15px 0; text-align: left;'>
     <h2 style='color: #1f77b4; margin-bottom: 15px;'>📩 ACTUALIZACIÓN SEMANAL</h2>
-    <a href='[TU_LINK_DE_SUBSTACK]' target='_blank'>
+    <a href='https://substack.com/@marketbeating' target='_blank'>
         <div style='background-color: #1f77b4; color: white; padding: 10px 20px; border-radius: 5px; display: inline-block; font-weight: bold;'>
             SUSCRÍBETE
         </div>
