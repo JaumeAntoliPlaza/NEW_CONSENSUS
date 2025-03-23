@@ -1,3 +1,3 @@
 {"timestamp":"2025-01-19 9:36:00",
-"data":{"Ticker":["AMZN","META","NVDA","MSFT","AAPL","AVGO","GOOGL","MA","TSLA","V","NFLX", "LLY","ORCL"],
-"Appearances":[19,17,17,16,15,12,9,9,7,6,6,4,4]}}
+"data":{"Ticker":["AMZN","NVDA","META","MSFT","AAPL","AVGO","GOOGL","MA","V","NFLX","TSLA","ORCL"],
+"Appearances":[19,18,17,15,14,13,9,8,7,6,5,4]}}
